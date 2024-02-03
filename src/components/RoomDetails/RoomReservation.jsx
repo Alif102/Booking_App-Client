@@ -8,13 +8,16 @@ import useAuth from '../../hooks/useAuth'
 const RoomReservation = ({ room }) => {
 
 
-  const [value, setValue] = useState(
+  const [value, setValue] = useState([
     {
       startDate: null,
       endDate: null,
       key: 'selection',
     },
-  );
+   ] );
+  const startDate = value[0].startDate;
+  const endDate = value[0].endDate;
+
   // const [dateRange, setDateRange] = useState({
   //   startDate: new Date(room?.from),
   //   endDate: new Date(room?.to),
@@ -24,7 +27,7 @@ const RoomReservation = ({ room }) => {
   const perDayPrice = room?.price;
 
   const handleSelect = (ranges) => {
-    setValue(ranges.selection);
+    setValue([ranges.selection]);
   };
 
   const Price = () => {
@@ -72,8 +75,10 @@ const RoomReservation = ({ room }) => {
     host: room?.host?.email,
     location: room?.location,
     total,
-    to: value.endDate,
-    from: value.startDate,
+    // value:[endDate] ,
+  //  to: value[0].startDate,
+  to : endDate,
+    from: startDate,
     title: room?.title,
     roomId: room?._id,
     image: room?.image,
@@ -130,9 +135,11 @@ console.log(setBookingInfo)
       </div>
       <BookingModal 
       // totalPrice={totalPrice}
-      Price={Price()}
+      // Price={Price()}
+      Price={total}
       // to={to}
       // from={from}
+      startDate={value[0].startDate} endDate={value[0].endDate}
 
         closeModal={closeModal}
         isOpen={isOpen}

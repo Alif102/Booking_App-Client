@@ -8,8 +8,9 @@ const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK)
 
 
 
-const BookingModal = ({Price, closeModal, isOpen, bookingInfo }) => {
+const BookingModal = ({Price, startDate,endDate,closeModal, isOpen, bookingInfo }) => {
   const total = Price;
+  console.log(startDate,endDate)
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as='div' className='relative z-10' onClose={closeModal}>
@@ -59,10 +60,11 @@ const BookingModal = ({Price, closeModal, isOpen, bookingInfo }) => {
                   </p>
                 </div>
                 <div className='mt-2'>
-                  <p className='text-sm text-gray-500'>
-                    From: {bookingInfo.from} - To:{' '}
-                    {bookingInfo.to}
-                  </p>
+                  {/* <p className='text-sm text-gray-500'>
+                    From: {startDate} - To:{' '}
+                    {endDate}
+                  </p> */}
+                  {/* From : {startDate}  */}
                 </div>
 
                 <div className='mt-2'>

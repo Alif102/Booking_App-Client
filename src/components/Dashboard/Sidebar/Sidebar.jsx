@@ -6,7 +6,7 @@ import ToggleBtn from '../../Button/ToggleBtn'
 import { GrLogout } from 'react-icons/gr'
 import { FcSettings } from 'react-icons/fc'
 import { AiOutlineBars } from 'react-icons/ai'
-import { BsGraphUp } from 'react-icons/bs'
+// import { BsGraphUp } from 'react-icons/bs'
 import MenuItem from './MenuItem'
 
 import useRole from '../../../hooks/useRole'
@@ -72,11 +72,11 @@ const Sidebar = () => {
             
              {/* <ToggleBtn toggleHandler={toggleHandler} /> */}
             <nav>
-              <MenuItem
+              {/* <MenuItem
                 icon={BsGraphUp}
                 label='Statistics'
                 address='/dashboard'
-              />
+              /> */}
             
 
               {/* Host Menu Items */}

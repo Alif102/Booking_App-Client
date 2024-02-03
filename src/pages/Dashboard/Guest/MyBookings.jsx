@@ -31,11 +31,11 @@ const MyBookings = () => {
               <table className='min-w-full leading-normal'>
                 <thead>
                   <tr>
-                    <th
+                  <th
                       scope='col'
                       className='px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal'
                     >
-                      Transaction Id
+                      Room Image
                     </th>
                     <th
                       scope='col'
@@ -49,6 +49,7 @@ const MyBookings = () => {
                     >
                       Info
                     </th>
+                   
                     {/* <th
                       scope='col'
                       className='px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal'
