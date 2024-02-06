@@ -1,10 +1,10 @@
-import axios from 'axios'
+import axios from 'axios' 
 // import { clearCookie } from './Auth'
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000/',
-    withCredentials: true
+    baseURL: 'https://hotelbookingserver.vercel.app/',
+   withCredentials: true
 })
-//  https://hotelbookingserver.vercel.app/
+//  https://hotelbookingserver.vercel.app/ http://localhost:5000/
 // intercept response and check for unauthorized responses.
 // axiosSecure.interceptors.response.use(
 //     response => response,

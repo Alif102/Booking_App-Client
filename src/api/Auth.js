@@ -1,5 +1,6 @@
 import axiosSecure from "."
 
+
 // Save user data in database
 export const saveUser = async user => {
   const currentUser = {
